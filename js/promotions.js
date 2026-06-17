@@ -3,12 +3,12 @@
 // ====================================
 
 const promotionTable =
-document.getElementById(“promotionTable”);
+document.getElementById("promotionTable");
 
 const addPromotionBtn =
-document.getElementById(“addPromotionRow”);
+document.getElementById("addPromotionRow");
 
-addPromotionBtn.addEventListener(“click”, () => {
+addPromotionBtn.addEventListener("click", () => {
   const row =
     document.createElement("tr");
 
