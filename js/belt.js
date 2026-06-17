@@ -13,7 +13,7 @@ const beltInventory = [
     {color: "White/Double Green", sizes: ["1","2"]},
     {color: "White/Double Brown", sizes: ["1","2"]},
     
-    {color:"White/Blue", sizes: ["1""2", "3","4", "5", "6", "7"]},
+    {color:"White/Blue", sizes: ["2", "3","4", "5", "6", "7"]},
     {color: "Blue", sizes: ["2", "3","4", "5", "6", "7"]},
     {color: "Blue/Yellow", sizes: ["2", "3","4", "5", "6", "7"]},
     {color: "Yellow", sizes: ["2", "3","4", "5", "6", "7"]},
