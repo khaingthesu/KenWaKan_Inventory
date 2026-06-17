@@ -180,11 +180,24 @@ addAssignedBtn.addEventListener("click", () => {
 
     assignedTable.appendChild(row);
 
-row.querySelector(".deleteRow")
-   .addEventListener("click", () => {
-
-       row.remove();
-
-   });
+attachDeleteEvent(row);
 
 });
+
+// ====================================
+// DELETE ROW
+// ====================================
+
+function attachDeleteEvent(row){
+
+    const deleteBtn =row.querySelector(".deleteRow");
+
+deleteBtn.addEventListener(
+    "click",
+    () => {
+
+        row.remove();
+
+    }
+);
+}
