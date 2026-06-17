@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promotion Eligibility - Ken Wa Kan</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <nav>
+
+        <a href="gi.html">Gi Inventory</a>
+        <a href="belt.html">Belts Inventory</a>
+        <a href="promotions.html"> Promotion Eligibility
+        </a>
+
+        <button id="logoutBtn">
+            Logout
+        </button>
+
+    </nav>
+
+    <h1>Eligible Students for Promotion</h1>
+
+    <div class="promotion-date">
+
+        <label for="promotionDate">
+            Promotion Date:
+        </label>
+
+        <input
+            type="date"
+            id="promotionDate">
+
+    </div>
+
+    <button id="addPromotionRow">
+        + Add Student
+    </button>
+
+    <table>
+
+        <thead>
+
+            <tr>
+
+                <th>Student Name</th>
+
+                <th>Program</th>
+
+                <th>Current Belt</th>
+
+                <th>Classes Required</th>
+
+                <th>Classes Completed</th>
+
+                <th>Eligible</th>
+
+                <th>Email Sent</th>
+
+                <th>Notes</th>
+
+                <th>Remove</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody id="promotionTable">
+
+            <tr>
+
+                <td>
+                    <input
+                        type="text"
+                        placeholder="Student Name">
+                </td>
+
+                <td>
+
+                    <select>
+
+                        <option>Tiny Tiger</option>
+                        <option>Ninja Skill</option>
+                        <option>Junior Basic</option>
+                        <option>Junior BBC</option>
+                        <option>Adult Basic</option>
+                        <option>Adult BBC</option>
+
+                    </select>
+
+                </td>
+
+                <td>
+
+                    <input
+                        type="text"
+                        placeholder="Current Belt">
+
+                </td>
+
+                <td>
+
+                    <input
+                        type="number"
+                        class="requiredClasses"
+                        min="0">
+
+                </td>
+
+                <td>
+
+                    <input
+                        type="number"
+                        class="completedClasses"
+                        min="0">
+
+                </td>
+
+                <td>
+
+                    <input
+                        type="checkbox"
+                        class="eligible">
+
+                </td>
+
+                <td>
+
+                    <input
+                        type="checkbox"
+                        class="emailSent">
+
+                </td>
+
+                <td>
+
+                    <input
+                        type="text"
+                        placeholder="Notes">
+
+                </td>
+
+                <td>
+
+                    <button class="deleteRow">
+                        Delete
+                    </button>
+
+                </td>
+
+            </tr>
+
+        </tbody>
+
+    </table>
+
+    <script src="js/promotions.js"></script>
+
+</body>
+
+</html>
