@@ -342,6 +342,11 @@ td{
     margin-bottom:25px;
 
 }
+.inventory-date label{
+
+    white-space:nowrap;
+
+}
 .inventory-date input{
 
     margin-left:10px;
