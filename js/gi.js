@@ -16,7 +16,7 @@ const sizes = [
     "7"
 ];
 
-const giTable = document.getElementById("giTable");
+
 
 // Create default Gi size rows
 
