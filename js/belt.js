@@ -28,17 +28,22 @@ const beltInventory = [
 ];
 
 const beltTable =
+
     document.getElementById("beltTable");
 
 // ====================================
+
 // CREATE BELT ROWS
+
 // ====================================
 
 beltInventory.forEach(belt => {
 
     belt.sizes.forEach(size => {
 
-        const row =document.createElement("tr");
+        const row =
+
+            document.createElement("tr");
 
         row.innerHTML = `
 
@@ -47,26 +52,48 @@ beltInventory.forEach(belt => {
             <td>${size}</td>
 
             <td>
+
                 <input
+
                     type="number"
+
                     class="stock"
+
                     value=""
+
                     min="0">
+
             </td>
 
             <td>
+
                 <input
+
                     type="number"
+
                     class="needed"
+
                     value=""
+
                     min="0">
+
             </td>
 
             <td class="order">
+
                 0
+
             </td>
 
-            
+            <td>
+
+                <button class="deleteRow">
+
+                    Delete
+
+                </button>
+
+            </td>
 
         `;
 
@@ -77,48 +104,67 @@ beltInventory.forEach(belt => {
 });
 
 // ====================================
+
 // CALCULATE ORDER
+
 // ====================================
 
 function calculateOrder(row){
 
     const stock =
+
         parseInt(
+
             row.querySelector(".stock").value
+
         ) || 0;
 
     const needed =
+
         parseInt(
+
             row.querySelector(".needed").value
+
         ) || 0;
 
     const order =
+
         Math.max(0, needed - stock);
 
     row.querySelector(".order").textContent =
+
         order;
+
 }
 
 // ====================================
+
 // ATTACH EVENTS
+
 // ====================================
 
 function attachEvents(){
 
     document
+
         .querySelectorAll(".stock, .needed")
+
         .forEach(input => {
 
             input.addEventListener(
+
                 "input",
+
                 () => {
 
                     const row =
+
                         input.closest("tr");
 
                     calculateOrder(row);
 
                 }
+
             );
 
         });
@@ -126,4 +172,3 @@ function attachEvents(){
 }
 
 attachEvents();
-
