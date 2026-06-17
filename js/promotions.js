@@ -157,3 +157,18 @@ deleteBtn.addEventListener(
 );
 
 }
+
+document
+    .querySelectorAll(".deleteRow")
+    .forEach(button => {
+
+        button.addEventListener(
+            "click",
+            () => {
+
+                button.closest("tr").remove();
+
+            }
+        );
+
+    });
