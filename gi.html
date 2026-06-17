@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gi Inventory - Ken Wa Kan</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav>
+        <a href="gi.html">Gi Inventory</a>
+        <a href="belts.html">Belts Inventory</a>
+        <a href="students.html">Current Active Students List</a>
+        <a href="promotions.html">Eligible Students for Promotion</a>
+    </nav>
+
+    <h1>Gi Inventory</h1>
+
+    <button id="addGiRow">
+        + Add New Gi Size
+    </button>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Size</th>
+                <th>In Stock</th>
+                <th>Needed</th>
+                <th>Need To Order</th>
+            </tr>
+        </thead>
+
+        <tbody id="giTable">
+        </tbody>
+
+</table>
+
+   
+
+    <h2>Assigned Uniforms</h2>
+
+    <button id="addAssignedRow">
+        + Assign Uniform
+    </button>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Student Name</th>
+                <th>Program</th>
+                <th>Gi Size</th>
+                <th>Date Assigned</th>
+                <th>Remove</th>
+            </tr>
+        </thead>
+
+        <tbody id="assignedTable">
+            <tr>
+                <td>
+                    <input type="text"
+                           placeholder="Student Name">
+                </td>
+
+                <td>
+
+                    <select>
+
+                        <option>Tiny Tiger</option>
+                        <option>Ninja Skill</option>
+                        <option>Junior Basic</option>
+                        <option>Junior BBC</option>
+                        <option>Adult Basic</option>
+                        <option>Adult BBC</option>  
+                    </select>
+
+                </td>
+
+                <td>
+
+                    <input type="text"
+                           placeholder="Size">
+
+                </td>
+
+                <td>
+
+                    <input type="date" placeholder="Date Assigned">
+
+                </td>
+                
+                <td>
+                    <button class="deleteRow">
+                        Delete
+                    </button>
+                </td>
+            </tr>
+
+        </tbody>
+
+    </table>
+
+    <script src="js/gi.js"></script>
+
+</body>
+
+</html>
