@@ -135,4 +135,22 @@ row.innerHTML = `
 
 promotionTable.appendChild(row);
 
+attachDeleteEvent(row);
 
+});
+
+// ====================================
+// DELETE ROW
+// ====================================
+
+function attachDeleteEvent(row){
+
+    const deleteBtn =row.querySelector(".deleteRow");
+
+deleteBtn.addEventListener(
+    "click",
+    () => {
+
+        row.remove();
+
+    }
