@@ -154,3 +154,6 @@ deleteBtn.addEventListener(
         row.remove();
 
     }
+);
+
+}
