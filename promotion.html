@@ -13,8 +13,11 @@
     <nav>
 
         <a href="gi.html">Gi Inventory</a>
+
         <a href="belt.html">Belts Inventory</a>
-        <a href="promotions.html"> Promotion Eligibility
+
+        <a href="promotions.html">
+            Promotion Eligibility
         </a>
 
         <button id="logoutBtn">
@@ -24,18 +27,6 @@
     </nav>
 
     <h1>Eligible Students for Promotion</h1>
-
-    <div class="promotion-date">
-
-        <label for="promotionDate">
-            Promotion Date:
-        </label>
-
-        <input
-            type="date"
-            id="promotionDate">
-
-    </div>
 
     <button id="addPromotionRow">
         + Add Student
@@ -49,24 +40,19 @@
 
                 <th>Student Name</th>
 
-                <th>Program</th>
-
                 <th>Current Belt</th>
 
                 <th>Classes Required</th>
 
                 <th>Classes Completed</th>
 
-                <th>Eligible</th>
-
-                <th>Email Sent</th>
-
-                <th>Notes</th>
+                <th>Shihan Approval?</th>
+                <th>Anticipated Promotion Date</th>
+                <th>Email Sent?</th>
 
                 <th>Remove</th>
 
             </tr>
-
         </thead>
 
         <tbody id="promotionTable">
@@ -83,12 +69,71 @@
 
                     <select>
 
-                        <option>Tiny Tiger</option>
-                        <option>Ninja Skill</option>
-                        <option>Junior Basic</option>
-                        <option>Junior BBC</option>
-                        <option>Adult Basic</option>
-                        <option>Adult BBC</option>
+                        <option>White/Yellow</option>
+            <option>White/Orange</option>
+            <option>White/Green</option>
+            <option>White/Brown</option>
+
+            <option>White/Double Yellow</option>
+            <option>White/Double Orange</option>
+            <option>White/Double Green</option>
+            <option>White/Double Brown</option>
+
+            <option>White/Blue</option>
+
+            <option>Blue</option>
+            <option>Blue/Yellow</option>
+
+            <option>Yellow</option>
+            <option>Yellow/Orange</option>
+
+            <option>Orange</option>
+            <option>Orange/Green</option>
+
+            <option>Green</option>
+            <option>Green/Brown</option>
+
+            <option>Brown</option>
+            <option>Brown/Black</option>
+
+            <option>Black</option>
+
+                    </select>
+
+                </td>
+
+                <td>
+
+                    <select>
+
+                        <option>White/Yellow</option>
+            <option>White/Orange</option>
+            <option>White/Green</option>
+            <option>White/Brown</option>
+
+            <option>White/Double Yellow</option>
+            <option>White/Double Orange</option>
+            <option>White/Double Green</option>
+            <option>White/Double Brown</option>
+
+            <option>White/Blue</option>
+
+            <option>Blue</option>
+            <option>Blue/Yellow</option>
+
+            <option>Yellow</option>
+            <option>Yellow/Orange</option>
+
+            <option>Orange</option>
+            <option>Orange/Green</option>
+
+            <option>Green</option>
+            <option>Green/Brown</option>
+
+            <option>Brown</option>
+            <option>Brown/Black</option>
+
+            <option>Black</option>
 
                     </select>
 
@@ -97,17 +142,9 @@
                 <td>
 
                     <input
-                        type="text"
-                        placeholder="Current Belt">
-
-                </td>
-
-                <td>
-
-                    <input
                         type="number"
                         class="requiredClasses"
-                        min="0">
+                        min="">
 
                 </td>
 
@@ -116,7 +153,7 @@
                     <input
                         type="number"
                         class="completedClasses"
-                        min="0">
+                        min="">
 
                 </td>
 
@@ -128,6 +165,15 @@
 
                 </td>
 
+                
+
+                <td>
+
+                    <input
+                        type="date"
+                        placeholder="Date">
+
+                </td>
                 <td>
 
                     <input
@@ -135,15 +181,6 @@
                         class="emailSent">
 
                 </td>
-
-                <td>
-
-                    <input
-                        type="text"
-                        placeholder="Notes">
-
-                </td>
-
                 <td>
 
                     <button class="deleteRow">
