@@ -85,15 +85,7 @@ beltInventory.forEach(belt => {
 
             </td>
 
-            <td>
-
-                <button class="deleteRow">
-
-                    Delete
-
-                </button>
-
-            </td>
+            
 
         `;
 
