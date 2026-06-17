@@ -135,4 +135,4 @@ row.innerHTML = `
 
 promotionTable.appendChild(row);
 
-attachDeleteEvent(row);
+
