@@ -1,17 +1,24 @@
 import { signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-auth.js";
-import { auth } from "./firebaseconfig.js";
+import { doc, serverTimestamp, setDoc } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-firestore.js";
+import { auth, db } from "./firebaseconfig.js";
 
-    window.login = async function(){
+window.login = async function (){
 
-    const email = document.getElementById("email").value;
-    const password = document.getElementById("password").value;
+const email = document.getElementById("email").value;
+const password = document.getElementById("password").value;
 
-try{
-await signInWithEmailAndPassword(auth, email, password);   
-window.location.href = "gi.html"; 
+try {
+    const userCredential = await signInWithEmailAndPassword(auth, email, password);
+    const user = userCredential.user;
+    await setDoc(doc(db, "users", user.uid), {
+        email: user.email,
+        lastLogin: serverTimestamp(),
+    });
+window.location.href = "gi.html";
 }
-catch (error){
-alert("Login Failed: " + error.message);
 
+catch (err) {
+    return alert("Login failed: " + err.message);
 }
 }
+

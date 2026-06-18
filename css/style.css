@@ -12,10 +12,8 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     background-color:#f4f6f9;
     min-height:100vh;
-
     display:flex;
     flex-direction:column;
-
     justify-content:flex-start;
     align-items:center;
 }
@@ -113,26 +111,7 @@ footer p{
     font-size:13px;
 }
 
-/* =========================
-   Mobile Responsive
-========================= */
 
-@media (max-width:500px){
-
-    .login-container{
-        width:90%;
-        padding:25px;
-    }
-
-    .logo{
-        width:180px;
-    }
-
-    .login-container h2{
-        font-size:24px;
-    }
-
-}
 
 
 /*-------------------------------------------------------*/
@@ -276,36 +255,99 @@ td{
     border-color:#2563eb;
 
 }
-@media (max-width:768px){
-    body{
-        padding:10px;
+/* =========================
+   GLOBAL MOBILE RESPONSIVE
+========================= */
 
+@media (max-width:768px){
+
+    body{
+
+        padding:10px;
     }
+
     nav{
-        display:flex;
+
         flex-direction:column;
+
         gap:10px;
 
+        padding:10px;
     }
 
-    nav a{
+    nav a,
+    #logoutBtn{
 
-        margin-right:0;
+        width:90%;
+
+        margin:0;
+
+        text-align:center;
+    }
+
+    h1{
 
         text-align:center;
 
+        font-size:24px;
+    }
+
+    h2{
+
+        text-align:center;
+    }
+
+    .inventory-date{
+
+        flex-direction:column;
+
+        gap:10px;
+    }
+
+    .inventory-date input{
+
+        width:100%;
+        max-width:250px;
     }
 
     table{
 
-        font-size:13px;
+        display:block;
 
+        overflow-x:auto;
+
+        white-space:nowrap;
+
+        width:100%;
     }
 
-    th,td{
+    th,
+    td{
 
         padding:8px;
 
+        min-width:120px;
+    }
+
+    .studentName{
+
+        min-width:220px;
+    }
+
+    #addAssignedRow,
+    #addPromotionRow{
+
+        width:90%;
+
+        margin:15px auto;
+
+        display:block;
+    }
+
+    input,
+    select{
+
+        font-size:14px;
     }
 
 }
@@ -425,4 +467,10 @@ td{
     min-width:200px;
 
     width:100%;
+}
+.table-container{
+
+    width:100%;
+
+    overflow-x:auto;
 }
