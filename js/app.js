@@ -7,6 +7,10 @@ window.login = async function (){
 const email = document.getElementById("email").value;
 const password = document.getElementById("password").value;
 
+ if (!email || !password) {
+    return alert("Please enter your email and password.");
+}
+
 try {
     const userCredential = await signInWithEmailAndPassword(auth, email, password);
     const user = userCredential.user;
