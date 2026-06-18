@@ -1,5 +1,5 @@
 import { signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-auth.js";
-import { doc, serverTimestamp, setDoc } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-firestore.js";
+import { addDoc, collection, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-firestore.js";
 import { auth, db } from "./firebaseconfig.js";
 
 window.login = async function (){
@@ -14,7 +14,7 @@ const password = document.getElementById("password").value;
 try {
     const userCredential = await signInWithEmailAndPassword(auth, email, password);
     const user = userCredential.user;
-    await setDoc(doc(db, "users", user.uid), {
+    await addDoc(collection(db, "userlogin"), {
         email: user.email,
         lastLogin: serverTimestamp(),
     });
