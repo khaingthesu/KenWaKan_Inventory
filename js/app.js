@@ -6,9 +6,11 @@ window.login = async function (){
 
 const email = document.getElementById("email").value;
 const password = document.getElementById("password").value;
+document.getElementById("errorMessage").textContent = "";// Clear previous error;
 
  if (!email || !password) {
-    return alert("Please enter your email and password.");
+    document.getElementById("errorMessage").textContent = "Please enter email and password.";
+    return;
 }
 
 try {
@@ -22,7 +24,6 @@ window.location.href = "gi.html";
 }
 
 catch (err) {
-    return alert("Login failed: " + err.message);
+    document.getElementById("errorMessage").textContent = "Invalid email or password.";
 }
 }
-
